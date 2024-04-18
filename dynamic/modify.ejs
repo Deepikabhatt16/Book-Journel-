@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1 class="edit">New Book Entry</h1>
+    <div class="book_entry">
+        <form class="modify" action="/submit" method="post">
+            <input class="book_name" type="text" name="tittle" placeholder="Tittle">
+            <div class="serial">
+                <input type="date" class="post"   name="date" id="dateOF">
+            <input  class="view"  placeholder="Rating"  type="number" name="rating" id="Rating">
+           
+            </div>
+             <textarea type="text" name="overview"  placeholder="Overview of Book" rows="10"></textarea>
+        <textarea placeholder="Summary of the Book " name="summary" id="sum" cols="30" rows="10"></textarea>
+        <button  class="ready" type="submit" value="submit">submit</button>
+        </form>
+    </div>
+    
+</body>  
+</html>

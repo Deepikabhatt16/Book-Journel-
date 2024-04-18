@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary of the Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="headofsum">Summary of the Book</h1>
+    <% for(let item of listitem) {%>
+
+        <div class="sumpage">
+
+
+
+
+            <div class="image"><img src="https://covers.openlibrary.org/b/isbn/<%=item.isbn%>-M.jpg " alt="cover">
+            </div>
+
+
+            <div class="information">
+                <h1 class="tittle">
+                    <%=item.book_name%>
+                </h1>
+                <h3 class="author">by : <%=item.author_name%>
+                </h3>
+                <small class="grey" id="read<%=item.id%>">Posted on: <%=item.posted_on %></small>
+                <h6 class="rate" id="rate<%=item.id%>"> How Much I Recommend It:<%=item.rate%>/10
+                </h6>
+                <p class="overview" id="over<%=item.id%>">
+                    <%=item.overview %>
+                </p>
+                <h3>Summary</h3>
+                <p class="summary" id="update<%=item.id%>">
+                    <%=item.summary%>
+                </p>
+
+
+
+            </div>
+            <div class="option">
+
+                <form action="/edit" method="post">
+                    <div class="editform">
+                        <input type="hidden" name="updateid" value="<%=item.id %>">
+                        <div class="one">
+                            <input type="date" name="updatedate" id="new<%=item.id%>" value="<%=item.posted_on %>"
+                                hidden>
+                            <input type="number" name="updaterate" id="views<%=item.id%>" value="<%=item.rate %>"
+                                hidden>
+                        </div>
+                        <div class="two">
+                            <textarea name="updateoverview" id="wake<%=item.id%>" cols="70" rows="20"
+                                hidden><%=item.overview%></textarea>
+                            <textarea name="updatesummary" id="view<%=item.id%>" cols="70" rows="20"
+                                hidden><%=item.summary%></textarea>
+                        </div>
+                    </div>
+                    <div class="align">
+
+
+                        <button type="submit" id="done<%=item.id%>" class="editofsum" value="<%=item.id%>" type="submit"
+                            hidden>update</button>
+                </form>
+                <div class="last">
+                    <button id="edit<%=item.id%>" class="editofsum" onclick="handler('<%=item.id%>')">Edit </button>
+
+                    <form action="/delete" method="post">
+                        <button class="editofdel" type="submit" name="delete" value="<%=item.id%>">Delete</button>
+                    </form>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        </div>
+        <script>
+            function handler(id) {
+                document.getElementById("edit" + id).setAttribute("hidden", true);
+                document.getElementById("done" + id).removeAttribute("hidden");
+                document.getElementById("update" + id).setAttribute("hidden", true);
+                document.getElementById("wake" + id).removeAttribute("hidden");
+                document.getElementById("over" + id).setAttribute("hidden", true);
+                document.getElementById("view" + id).removeAttribute("hidden");
+                document.getElementById("read" + id).setAttribute("hidden", true);
+                document.getElementById("rate" + id).setAttribute("hidden", true);
+                document.getElementById("new" + id).removeAttribute("hidden");
+                document.getElementById("views" + id).removeAttribute("hidden");
+
+
+            }
+        </script>
+
+
+</body>
+
+</html>

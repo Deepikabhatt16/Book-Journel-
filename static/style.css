@@ -1,0 +1,309 @@
+* {
+        font-family: cursive;
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+        background:#f5f0ec;}
+b{font-size: large;
+        font-weight: 900;
+}
+.email {
+        text-decoration: none;
+
+}
+
+.email:hover {
+        text-decoration: underline;
+
+}
+
+.link {
+        font-size: 55px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: rgb(221, 114, 169);
+        text-decoration: none;
+        padding-bottom: 25px;
+        text-shadow: 4px 5px 7px rgb(229, 201, 201);
+
+}
+
+.link:hover {
+        text-decoration: underline;
+        text-shadow: none;
+
+}
+
+.head {
+        font-size: 35px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: rgb(235, 115, 135);
+        text-decoration: none;
+
+
+}
+
+body {
+
+        background: linear-gradient(#FFC0CB);
+
+}
+
+.brief {
+        width: 700px;
+        font-weight: 600;
+        color: rgb(88, 85, 86);
+        padding-top: 1rem;
+
+}
+
+.filter {
+        padding: 1rem 0;
+        display: flex;
+
+}
+
+.main {
+        margin-top: 30px;
+        margin-left: 20%;
+}
+
+hr {
+        margin-top: 15px;
+}
+
+.add {
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 2px;
+        color: rgb(21, 62, 64);
+        font-weight: 900;
+        border: .25px solid rgb(59, 45, 25);
+        background: #eec2e7;
+}
+
+.btn {
+        display: flex;
+
+        margin-left: 12px;
+
+}
+
+button {
+        cursor: pointer;
+}
+
+.new {
+        margin-top: 1rem;
+        padding: 0.25rem;
+        width: 100px;
+        height: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        box-shadow: 4px 4px 5px black;
+        color: aliceblue;
+        border-radius: 25%;
+        margin-left: 70%;
+        background-color: #96be5f;
+}
+
+.middle {
+        width: 70%;
+        
+
+        margin-top: 20px;
+
+
+}
+
+.tittle {
+        font-size: 40px;
+        color: #ba7b43;
+
+}
+
+.image {
+        float: left;
+
+        margin-right: 15px;
+        border: 1px solid black;
+}
+
+.author {
+        font-size: 25px;
+        color: #9ea051d3;
+}
+
+.overview {
+        font-weight: 800;
+        margin-top: 1rem;
+        color: rgb(29, 38, 24);
+}
+
+.grey,
+.rate {
+        margin-top: 1rem;
+        color: #949094;
+        font-size: .8rem;
+        font-weight: 600;
+
+}
+
+.submit {
+        color: white;
+        width: 150px;
+        border-radius: 1rem;
+        margin-top: 15px;
+        font-size: 15px;
+        height: 30px;
+
+
+        background: #e3b1b1;
+}
+
+.modify {
+
+        display: flex;
+        margin-top: 10px;
+        flex-direction: column;
+}
+
+.book_entry {
+        width: 50%;
+        margin-left: 25%;
+
+}
+
+.edit {
+        text-align: center;
+        font-size: 45px;
+        color: #a0dc9a;
+        text-shadow: 3px 4px 5px rgb(85, 52, 52);
+}
+
+.book_name {
+        width: 400px;
+        height: 30px;
+        margin: 25px 0;
+        padding: 12px;
+        border-radius: 10px;
+}
+
+.post,
+.view {
+        border-radius: 12px;
+        height: 40px;
+        width: 150px;
+        padding: 12px;
+}
+
+.serial {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+textarea {
+        margin-top: 12px;
+        border-radius: 20px;
+        padding: 10px;
+        border: 2px solid gray;
+}
+
+.ready {
+        margin-top: 1rem;
+        padding: 0.25rem;
+        width: 100px;
+        height: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        box-shadow: 4px 4px 5px black;
+        color: aliceblue;
+        border-radius: 25%;
+        margin-left: 40%;
+        background-color: #546935;
+}
+
+.sumpage {
+        width: 70%;
+        margin-left: 20%;
+}
+
+h3 {
+        margin-top: 25px;
+        font-weight: 600;
+        color: #6e3841;
+        font-size: 35px;
+
+}
+
+.summary {
+        margin: 20px 0;
+        font-weight: 600;
+        text-shadow: 1px .5px .5px black;
+        color: #221a1b;
+        font-family: cursive;
+}
+
+.headofsum {
+        text-align: center;
+        margin: 30px 0;
+        text-decoration: underline;
+        font-size: 45px;
+        color: rgb(58, 85, 85);
+}
+
+.option {
+        display: flex;
+        align-items: center;
+
+        justify-content: space-around;
+}
+
+.editofsum {
+        text-align: center;
+        font-size: 20px;
+        background-color: #4b7347;
+        color: white;
+        padding: 7px 15px;
+        border-radius: 20px;
+        width: 100px;
+        height: fit-content;
+        text-shadow: 3px 4px 5px rgb(85, 52, 52);
+}
+
+.editofdel {
+        text-align: center;
+        font-size: 20px;
+        background-color: #bd5050;
+        color: white;
+        padding: 7px 15px;
+        border-radius: 20px;
+        width: 100px;
+        height: fit-content;
+        text-shadow: 3px 4px 5px rgb(85, 52, 52);
+}
+
+.editform {
+        display: flex;
+        flex-direction: column;
+
+
+}
+
+.last {
+        display: flex;
+        justify-content: space-evenly;
+}
+.two {
+        display: flex;
+        flex-direction: column;
+}
+
+.align {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+}

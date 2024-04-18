@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Book Journel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <a class="link" href="https://deepikabhatt16.github.io/Myportfolio/index.html">Deepika Bhatt</a>
+    <h1 class="head">My Book Tracker</h1>
+    <div class="brief">
+      <p>
+        We love to read books or novel but after we finish reading them we don't remember <br> the most salient parts of
+        the book or end up searching about those particular parts  <br>on internet or in few cases we prefer to read them
+        again.So,I made
+        this <b>Book Journel</b> website based on this idea, where the Books,Novel we often read can be journeled here.
+        we can write summary ,overview or also can rate or recommend the book accordingly.The books are sortable by
+        rating, recency and title. </p> <br>
+      <div class="filter">
+        Sorted with my top recommendations up top.Sort by
+        <div class="btn">
+          <form class="item" action="/tittle" method="post">
+            <button class="add" type="submit" name="list"> title</button>,
+          </form>
+          <form class="item" action="/newest" method="post">
+
+            <button class="add" type="submit" name="list">newest</button> or
+          </form>
+          <form class="item" action="/best" method="post">
+
+            <button class="add" type="submit" name="list"> best</button>.
+          </form>
+        </div>
+
+      </div>
+
+
+      And if you have any questions. You can also <a class="email"
+        href="https://deepikabhatt16.github.io/Myportfolio/index.html#contact">email me</a>.
+
+      </p>
+
+      <hr>
+    </div>
+
+    <div class="container">
+      <!--<form action="/dynamic/modify.ejs" method="post">New Post</form>-->
+      <form class="item" action="/add" method="post">
+
+        <button class="new" type="submit" name="list">New</button>
+      </form>
+      <% for(let item of (locals.listitem)) {%>
+
+        <div class="middle">
+
+
+
+
+          <div class="image"> <img class="img" src="https://covers.openlibrary.org/b/isbn/<%=item.isbn%>-M.jpg "
+              alt="cover">
+
+          </div>
+
+          <div class="information">
+            <h1 class="tittle">
+              <%=item.book_name%>
+            </h1>
+            <h3 class="author"> by <%=item.author_name%>
+            </h3>
+            <small class="grey">Posted On : <%=item.posted_on %></small>
+            <h6 class="rate">
+              How Much I Recommend It:<%=item.rate%>/10
+            </h6>
+            <p class="overview">
+              <%=item.overview %>
+            </p>
+
+            <form class="item" action="/summary" method="post">
+
+              <button class="submit" type="submit" name="list" value="<%=item.id%>">Read Summary</button>
+            </form>
+          </div>
+        </div>
+        <% } %>
+
+
+    </div>
+  </div>
+
+</body>
+
+</html>
